@@ -2,6 +2,8 @@ $(document).ready(function() {
  	$("#new-task-button").click(function() {
 	  $('.task-line:first').clone().appendTo('#task-form');
 	});
+	$.datepicker.setDefaults( { dateFormat: 'yy-mm-dd', firstDay: 1 } )
+	$('input.datepicker').datepicker();
 	$('#items').sortable({
 		axis: 'y',
 		dropOnEmpty: false,
@@ -23,3 +25,6 @@ $(document).ready(function() {
 		}
 	});
 });
+
+
+

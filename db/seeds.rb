@@ -86,7 +86,7 @@ end
   cmmt.save!
 end
 
-89.times do
+889.times do
   Task.order("rand()").first.items.create!(
     :title     => Faker::Company.bs,
     :position  => rand(20),

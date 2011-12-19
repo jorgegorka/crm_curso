@@ -35,7 +35,7 @@ class CompaniesController < AdminController
   end
   
   def show
-    @comments = @company.comments.last_comments.paginate(:page => (params[:page] || 1))
+    @comments = @company.comments.includes(:user).last_comments.paginate(:page => (params[:page] || 1))
   end
   
   def update

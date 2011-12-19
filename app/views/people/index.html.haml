@@ -1,5 +1,22 @@
 %h1
   Listado de personas
+  
+.row
+  .span16
+    = form_tag people_url, :method => :get do
+      .clearfix
+        = label_tag :sname, "Texto a buscar"
+        .input
+          = text_field_tag :sname
+      .clearfix
+        = label_tag :screated, "Fecha de alta"
+        .input
+          = text_field_tag :screated, '', :class => "datepicker"
+      .clearfix
+        .input
+          = submit_tag 'Buscar personas', :class => "btn"
+      
+  
 
 %table.zebra-striped
   %thead

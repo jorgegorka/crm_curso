@@ -20,7 +20,7 @@ class PeopleController < AdminController
   end
   
   def index
-    @people = Person.order("name").paginate(:page => (params[:page] || 1))
+    @people = Person.search_people(params).includes(:company).order("name").paginate(:page => (params[:page] || 1))
   end
   
   def new
@@ -28,7 +28,7 @@ class PeopleController < AdminController
   end
   
   def show
-    @comments = @person.comments.last_comments.paginate(:page => (params[:page] || 1))
+    @comments = @person.comments.includes(:user).last_comments.paginate(:page => (params[:page] || 1))
   end
   
   def update
