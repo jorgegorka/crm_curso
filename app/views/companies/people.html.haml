@@ -1,0 +1,23 @@
+%h1
+  = @company.name
+%h2 Personas relacionadas
+
+%table.zebra-striped
+  %thead
+    %tr
+      %th Nombre
+      %th Cargo
+      %th Detalles
+  %tbody
+    - @people.each do |person|
+      %tr
+        %td
+          = link_to person.name, person_url(person)
+        %td
+          = person.title
+        %td
+          = link_to "Modificar datos", edit_person_url(person), :class => "btn primary"
+  %tfoot
+    %tr
+      %td{ :colspan => 3}
+        = will_paginate @people

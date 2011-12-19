@@ -1,0 +1,15 @@
+.row
+  .span16
+    = error_messages_for :company
+    = form_for @company do |c|
+      .clearfix
+        = c.label :name
+        .input
+          = c.text_field :name, :class => "xxlarge"
+      .clearfix
+        = c.label :details
+        .input
+          = c.text_area :details, :class => "xxlarge", :rows => 5
+      .clearfix
+        .input
+          = c.submit 'Guardar datos', :class => "btn"

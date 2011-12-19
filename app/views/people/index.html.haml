@@ -1,0 +1,16 @@
+%h1
+  Listado de personas
+
+%table.zebra-striped
+  %thead
+    %tr
+      %th Nombre
+      %th Empresa
+      %th Cargo
+      %th Detalles
+  %tbody
+    = render :partial => "people/person", :collection => @people
+  %tfoot
+    %tr
+      %td{ :colspan => 3}
+        = will_paginate @people

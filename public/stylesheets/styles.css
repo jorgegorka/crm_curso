@@ -1,0 +1,77 @@
+/* application styles */
+
+body {
+  padding-top: 60px;
+}
+
+div.field_with_errors {
+	float: left;
+}
+
+div.field_with_errors label {
+	color: #fff;
+	font-weight: bold;
+}
+
+.pagination a, .pagination span, .pagination em {
+  padding: .2em .5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+.pagination span.disabled {
+  color: #999;
+  border: 1px solid #DDD;
+}
+
+.pagination span.current {
+  font-weight: bold;
+  background: #c7eefe;
+  color: white;
+  border: 1px solid #c7eefe;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #c7eefe;
+  border: 1px solid #c7eefe;
+}
+
+.pagination a:hover, .pagination a:focus {
+  color: #003;
+  border-color: #003;
+}
+
+.pagination .page_info {
+  background: #c7eefe;
+  color: white;
+  padding: .4em .6em;
+  width: 22em;
+  margin-bottom: .3em;
+  text-align: center;
+}
+
+.pagination .page_info b {
+  color: #003;
+  background: #6aa6ed;
+  padding: .1em .25em;
+}
+
+.pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+* html .pagination {
+  height: 1%;
+}
+
+*:first-child+html .pagination {
+  overflow: hidden;
+}
+
+.handle:hover{cursor: move;}

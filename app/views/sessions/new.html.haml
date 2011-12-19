@@ -1,0 +1,21 @@
+.row
+  .span16.offset4
+    %h1 Accede a tu cuenta
+.row
+  .span16.offset2
+    = form_tag session_path do
+      .clearfix
+        = label_tag 'Email'
+        .input
+          = text_field_tag 'email', @email
+      .clearfix
+        = label_tag 'Contraseña'
+        .input
+          = password_field_tag 'password', nil
+      .clearfix
+        = label_tag 'remember_me', 'Recordarme'
+        .input
+          = check_box_tag 'remember_me', '1', @remember_me
+      .clearfix
+        .input
+          = submit_tag 'Acceder', :class => "btn"

@@ -1,0 +1,7 @@
+- if flash.present?
+  - flash.each do |status, message|
+    %div{:class => ["alert-message fade in", status], "data-alert" => "alert" }
+      =link_to("X", "#", :class => "close")
+      %p
+        %strong
+          = message

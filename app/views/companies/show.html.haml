@@ -1,0 +1,19 @@
+%h1.span16 
+  = @company.name
+.row
+  .span16
+    = @company.details    
+.row
+  .span16
+    %h2 Últimos comentarios realizados
+= render :partial => "shared/comment", :collection => @comments
+= will_paginate @comments
+= render :partial => "shared/new_comment", :locals => {:commenter => @company, :commenter_name => @company.name}
+
+- content_for :sidebar do
+  .well
+    %p
+      = link_to "Personas relacionadas", people_company_url(@company), :class => "btn"
+    %p
+      = link_to "Nuevo comentario", new_company_comment_url(@company), :class => "btn info", "data-controls-modal" => "modal-from-dom", "data-backdrop" => "true", "data-keyboard" => "true"
+    

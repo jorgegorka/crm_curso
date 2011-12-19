@@ -1,0 +1,31 @@
+.row
+  .span16
+    = error_messages_for :person
+    = form_for @person do |p|
+      .clearfix
+        = p.label :name
+        .input
+          = p.text_field :name, :class => "xxlarge"
+      .clearfix
+        = p.label :title
+        .input
+          = p.text_field :title, :class => "xxlarge"
+      .clearfix
+        = p.label :company_id
+        .input
+          = p.select :company_id, @companies, {:include_blank => true}, :class => "xxlarge"    
+      .clearfix
+        = p.label :twitter
+        .input
+          = p.text_field :twitter
+      .clearfix
+        = p.label :linkedin
+        .input
+          = p.text_field :linkedin, :class => "xxlarge"    
+      .clearfix
+        = p.label :details
+        .input
+          = p.text_area :details, :class => "xxlarge", :rows => 5
+      .clearfix
+        .input
+          = p.submit 'Guardar datos', :class => "btn"

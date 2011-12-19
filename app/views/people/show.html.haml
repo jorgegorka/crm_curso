@@ -1,0 +1,16 @@
+%h1.span16 
+  = @person.name
+.row
+  .span16
+    = @person.details
+.row
+  .span16
+    %h2 Últimos comentarios realizados
+= render :partial => "shared/comment", :collection => @comments
+= will_paginate @comments
+= render :partial => "shared/new_comment", :locals => {:commenter => @person, :commenter_name => @person.name}
+
+- content_for :sidebar do
+  .well
+    %p
+      = link_to "Nuevo comentario", new_person_comment_url(@person), :class => "btn info", "data-controls-modal" => "modal-from-dom", "data-backdrop" => "true", "data-keyboard" => "true"    

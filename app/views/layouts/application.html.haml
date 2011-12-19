@@ -1,0 +1,12 @@
+!!! 5
+%html
+  = render :partial => "layouts/header"
+  %body
+    = render :partial => "layouts/page_header"
+    .container-fluid
+      .sidebar
+        = content_for?(:sidebar) ? yield(:sidebar) : render("shared/sidebar")
+      .content
+        = render :partial => "shared/flash_message"
+        = yield
+      = render :partial => "layouts/page_footer"

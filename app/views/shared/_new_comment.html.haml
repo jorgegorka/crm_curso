@@ -1,0 +1,15 @@
+#modal-from-dom.modal.hide.fade
+  .modal-header
+    = link_to "x", "#", :class => "close"
+    %h3 Nuevo comentario
+  .modal-body
+    = form_for [commenter, Comment.new], :html => {:class => "form-stacked"} do |com|
+      .clearfix
+        = com.label :details
+        .input
+          = com.text_area :details, :class => "xxlarge", :rows => 5, :cols => 50
+      .clearfix
+        .input
+          = com.submit "Guardar comentario", :class => "btn primary"
+  .modal-footer
+    Comentario para #{commenter_name}

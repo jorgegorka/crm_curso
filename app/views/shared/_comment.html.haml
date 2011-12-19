@@ -1,0 +1,8 @@
+.row
+  .span3
+    = comment.user.name
+    %br/
+    = comment.created_at.strftime("%d-%m-%y %H:%M")
+  .span13
+    = comment.details
+%hr/    

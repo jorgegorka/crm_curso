@@ -1,0 +1,18 @@
+%h1
+  = @task.title
+  
+%h3
+  Finaliza el #{@task.finished_on.strftime("%d-%m-%Y")}
+  
+%h2
+  Cosas a realizar
+
+%ul.unstyled#items{ "data-tid" => @task.id}
+  = render @items
+  
+= render :partial => "shared/new_item"
+  
+- content_for :sidebar do
+  .well
+    %p
+      = link_to "Nuevo item", new_task_item_url(@task), :class => "btn info", "data-controls-modal" => "modal-from-dom", "data-backdrop" => "true", "data-keyboard" => "true"  

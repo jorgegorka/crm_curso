@@ -1,0 +1,9 @@
+%tr
+  %td
+    = link_to person.name, person_url(person)
+  %td
+    = person.company.present? ? link_to(person.company.name, company_url(person.company)) : "---"
+  %td
+    = person.title
+  %td
+    = link_to "Modificar datos", edit_person_url(person), :class => "btn primary"

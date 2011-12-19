@@ -1,0 +1,24 @@
+es:
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "Registro incorrecto"
+    models:
+      company:
+        one: "Empresa"
+        other: "Empresas"
+      person:
+        one: "Persona"
+        other: "Personas"
+      task:
+        one: "Tarea"
+        other: "Tareas"
+    attributes:
+      company:
+        name: "Nombre"
+        details: "Información adicional"
+      person:
+        name: "Nombre"
+        title: "Cargo"
+        details: "Información adicional"
+        

@@ -1,0 +1,7 @@
+development:
+  encoding: utf8
+  adapter: mysql2
+  database: crm_eniac
+  username: root
+  password:
+  host: localhost

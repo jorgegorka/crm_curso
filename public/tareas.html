@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CRM on Rails</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le styles -->
+    <link href="/stylesheets/bootstrap.css" rel="stylesheet" />
+    <link href="/stylesheets/docs.css" rel="stylesheet" />
+    <script src="/javascripts/jquery.min.js"></script>
+    <script src="/javascripts/jquery-ui.min.js"></script>
+    <script src="/javascripts/jquery_ujs.js"></script>
+    <script src="/javascripts/application.js"></script>
+
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="topbar-inner">
+        <div class="container-fluid">
+          <a class="brand" href="#">CRM on Rails</a>
+          <ul class="nav">
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/clientes.html">Clientes</a></li>
+            <li><a href="/contactos.html">Contactos</a></li>
+            <li class="active"><a href="/tareas.html">Tareas</a></li>
+          </ul>
+          <ul class="nav secondary-nav">
+            <li><a href="#">Administración</a></li> 
+            <li><a href="#">Usuarios</a></li> 
+          </ul>  
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="sidebar">
+        <div class="well">
+          <h5>Menú principal</h5>
+          <ul>
+            <li><a href="#">Añadir cliente</a></li>
+            <li><a href="#">Añadir contacto</a></li>
+            <li><a href="#">Buscar cliente</a></li>
+            <li><a href="#">Buscar contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="content">
+        <div class="row">
+          <div class="span16"> 
+            <h1>Lista de tareas</h1>
+          </div>  
+        </div>
+        <div class="row">
+          <div class="span10">
+            <form action="" method="get" class="form-stacked">
+              <div id="task-form">
+                <div class="span8 task-line">
+                  <label for="task-text">
+                    Que tienes que hacer?
+                  </label>
+                  <input class="span8" type="text" id="task-text" />
+                </div>  
+              </div>  
+            </form>  
+          </div>
+          <div class="span6">
+            <a href="#" onclick="alert('has hecho click'); return false;" id="new-task-button" class="btn">Nueva tarea</a>
+          </div>  
+        </div>
+        <div class="clearfix">
+          <input name="commit" type="submit" class="btn" value="Guardar tareas" />
+        </div>
+      </div>
+      <footer>
+        <p>
+          &copy; Formación Eniac 2011 - Por Jorge Alvarez http://www.alvareznavarro.es - Twitter: @jorgealvarez
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

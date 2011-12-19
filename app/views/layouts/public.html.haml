@@ -1,0 +1,14 @@
+!!! 5
+%html
+  = render :partial => "layouts/header"
+  %body
+    %header.topbar
+      .topbar-inner
+        .container-fluid
+          %a.brand{ :href => "#" } CRM on Rails
+    .content
+      = render :partial => "shared/flash_message"
+      = yield
+    %footer
+      %p
+        &copy; Formación Eniac 2011 - Por Jorge Alvarez http://www.alvareznavarro.es - Twitter: @jorgealvarez

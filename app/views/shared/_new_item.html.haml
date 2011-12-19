@@ -1,0 +1,15 @@
+#modal-from-dom.modal.hide.fade
+  .modal-header
+    = link_to "x", "#", :class => "close"
+    %h3 Nuevo item
+  .modal-body
+    = form_for [@task, Item.new], :html => {:class => "form-stacked"} do |com|
+      .clearfix
+        = com.label :title
+        .input
+          = com.text_field :title, :class => "xxlarge"
+      .clearfix
+        .input
+          = com.submit "Guardar tarea", :class => "btn primary"
+  .modal-footer
+    Item para la tarea #{@task.title}

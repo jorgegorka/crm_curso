@@ -1,0 +1,18 @@
+%header.topbar
+  .topbar-inner
+    .container-fluid
+      %a.brand{ :href => "#" } CRM on Rails
+      %ul.nav
+        %li 
+          =link_to("Inicio", root_url)
+        %li 
+          = link_to "Empresas", companies_url
+        %li
+          = link_to "Personas", people_url
+        %li
+          = link_to "Tareas", tasks_url
+      %ul.nav.secondary-nav
+        %li 
+          =link_to("Ayuda", "http://google.com")
+        %li 
+          =link_to("Log out", logout_url)  
