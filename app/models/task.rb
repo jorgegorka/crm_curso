@@ -8,9 +8,12 @@ class Task < ActiveRecord::Base
   
   validate :date_less_than_one_year_from_now
   
+  attr_protected :user_id
+  
   protected
 
   def date_less_than_one_year_from_now
-    errors.add(:finished_on, "no puede ser mayor de un año.") if (!finished_on.blank? and (finished_on > 1.year.from_now))
+    errors.add(:finished_on, "No puedes poner tareas con fecha de fin mayor que un año.") if (!self.finished_on.blank? and (self.finished_on.to_time.utc > 1.year.from_now))
   end
+  
 end

@@ -21,6 +21,9 @@ Html::Application.routes.draw do
       collection do
         post :sort
       end
+      member do
+        post :export
+      end
     end
     resources :comments
   end

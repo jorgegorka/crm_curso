@@ -2,7 +2,7 @@
   = @task.title
   
 %h3
-  Finaliza el #{@task.finished_on.strftime("%d-%m-%Y")}
+  = "Finaliza el #{@task.finished_on.strftime("%d-%m-%Y")}" if @task.finished_on.present?
   
 %h2
   Cosas a realizar

@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 class Item < ActiveRecord::Base
-  acts_as_list
   belongs_to :task
+  acts_as_list, :scope => :task
   
   before_create :set_position_to_last
   

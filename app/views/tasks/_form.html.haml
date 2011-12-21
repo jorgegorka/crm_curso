@@ -1,0 +1,15 @@
+.row
+  .span16
+    = error_messages_for :task
+    = form_for @task do |c|
+      .clearfix
+        = c.label :title
+        .input
+          = c.text_field :title, :class => "xxlarge"
+      .clearfix
+        = c.label :finished_on
+        .input
+          = c.text_field :finished_on, :class => "datepicker"
+      .clearfix
+        .input
+          = c.submit 'Guardar datos', :class => "btn"
